@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Popover Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Optional custom CSS -->
+  <link rel="stylesheet" href="styles.css"/> 
+</head>
+<body>
+
+<!-- Header -->
+<div class="fullwidth" id="header">
+  <header>    
+    <h3 class="text-center">Phenomenal India</h3>
+  </header>
+</div>
+<br>
+
+<!-- Main Content -->
+<div class="container">
+  <img src="shutterstockimages/india.PNG" class="img-responsive" alt="India">
+
+  <!-- Popover Button -->
+  <a href="#" 
+     class="btn btn-primary" 
+     data-toggle="popover" 
+     title="Welcome to Phenomenal India Tourism"
+     data-content="View customer review videos." 
+     data-placement="left" 
+     style="float:right; margin:20px">
+    View customer review videos
+  </a>
+
+  <!-- Description -->
+  <p id="aboutIndia">
+    India is a very vast country, rich in cultural heritage and breathtaking natural beauty and resources.
+    India is popular for its integrity amongst the rich diversity of people speaking multiple different languages.
+    One can travel within India with any travel segments like luxury stays like palace hotels, or even moderate options 
+    like guesthouses or homestays. This naturally adds to the appeal as one of the possible travel destinations.
+  </p>
+</div>
+
+<!-- Enable Popovers -->
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+  });
+</script>
+
+</body>
+</html>

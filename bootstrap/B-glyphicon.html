@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap & jQuery CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Optional custom stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="fullwidth" id="header">
+    <header class="text-center">
+      <h3>Phenomenal India</h3>
+    </header>
+  </div>
+
+  <br>
+
+  <div class="container whitebackground gridbordergrey">
+
+    <!-- Top row with contact, search, and home icon -->
+    <div class="row" style="padding:5px">
+      <div class="col-sm-6">
+        <h3 class="text-left">
+          <strong>Phenomenal India Membership Offers</strong>
+        </h3>
+      </div>
+
+      <div class="col-sm-2 text-right">
+        <br>
+        <span class="glyphicon glyphicon-phone-alt" title="Contact Number"></span>
+        <span>9999999999</span>
+      </div>
+
+      <div class="col-sm-2">
+        <br>
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Search">
+          <span class="input-group-addon" title="Enter to search">
+            <i class="glyphicon glyphicon-search"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-sm-2 text-right">
+        <br>
+        <span class="glyphicon glyphicon-home" title="Go to home page"></span>
+      </div>
+    </div>
+
+    <!-- Membership Offers Cards -->
+    <div class="row whiteborder greybg">
+      
+      <!-- Kerala Tour -->
+      <div class="col-sm-4 whiteborder" style="padding:15px">
+        <strong>Kerala Tour</strong>
+        <img src="shutterstockimages/Kerala.PNG" class="img-responsive" />
+        <span title="Click to share" onclick="$('#s1').toggle()">
+          <span class="glyphicon glyphicon-share"></span>
+        </span>
+        <span style="float:right; display:none" id="s1">
+          <span class="glyphicon glyphicon-print" title="Print"></span>
+          <span class="glyphicon glyphicon-envelope" title="Mail"></span>
+          <span class="glyphicon glyphicon-download-alt" title="Download details"></span>
+        </span>
+      </div>
+
+      <!-- TamilNadu Tour -->
+      <div class="col-sm-4 whiteborder" style="padding:15px">
+        <strong>TamilNadu Tour</strong>
+        <img src="shutterstockimages/TNn.PNG" class="img-responsive" />
+        <span title="Click to share" onclick="$('#s2').toggle()">
+          <span class="glyphicon glyphicon-share"></span>
+        </span>
+        <span style="float:right; display:none" id="s2">
+          <span class="glyphicon glyphicon-print" title="Print"></span>
+          <span class="glyphicon glyphicon-envelope" title="Mail"></span>
+          <span class="glyphicon glyphicon-download-alt" title="Download details"></span>
+        </span>
+      </div>
+
+      <!-- Sikkim Tour -->
+      <div class="col-sm-4 whiteborder" style="padding:15px">
+        <strong>Sikkim Tour</strong>
+        <img src="shutterstockimages/Sikkim.PNG" class="img-responsive" />
+        <span title="Click to share" onclick="$('#s3').toggle()">
+          <span class="glyphicon glyphicon-share"></span>
+        </span>
+        <span style="float:right; display:none" id="s3">
+          <span class="glyphicon glyphicon-print" title="Print"></span>
+          <span class="glyphicon glyphicon-envelope" title="Mail"></span>
+          <span class="glyphicon glyphicon-download-alt" title="Download details"></span>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Renew Membership Section -->
+    <div class="row whitebackground" style="padding:5px">
+      <h3 style="padding:5px">
+        <strong>Renew Membership</strong>
+      </h3>
+
+      <!-- User Profile Info -->
+      <div class="col-sm-offset-1 col-sm-3 whiteborder greybg" style="padding:15px">
+        <br>
+        <table>
+          <tr class="text-center">
+            <td>
+              <img src="shutterstockimages/user.PNG" class="img-responsive img-thumbnail" />
+              <br>
+              <span title="Modify profile pic">
+                <span class="glyphicon glyphicon-camera"></span>
+              </span>
+              <div class="input-group">
+                <input type="text" value="Tom" class="form-control" disabled>
+                <span class="input-group-addon" title="Modify">
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </span>
+              </div>
+              <br><br>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- User Form -->
+      <div class="col-sm-7 whiteborder greybg" style="padding:15px">
+        <form class="form-horizontal css-form">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Please update your email ID">
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-map-marker"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Please update your location">
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-phone"></i>
+            </span>
+            <input type="tel" class="form-control" placeholder="Please update your phone number">
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-calendar"></i>
+            </span>
+            <input type="date" class="form-control" placeholder="Please update your date of birth">
+          </div>
+          <br>
+          <div class="text-left">
+            <button class="btn btn-primary">Renew Membership</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

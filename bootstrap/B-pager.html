@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tourist Statistics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+    .faq {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    .pager li a {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="fullwidth" id="header">
+    <header class="text-center">
+      <h3>Phenomenal India</h3>
+    </header>
+  </div>
+
+  <!-- Content Section -->
+  <div class="page container">
+    <p class="text-center faq"><strong>Tourists Statistics</strong></p>
+
+    <div id="pagecontent" class="well"></div>
+
+    <div class="text-center">
+      <ul class="pager">
+        <li class="previous"><a>&laquo; Previous</a></li>
+        <li class="next"><a>Next &raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- jQuery Script -->
+  <script>
+    $(document).ready(function(){
+      var p1 = `
+        <table class='table table-bordered table-hover'>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Kerala</th>
+              <th>Tamil Nadu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2015</td>
+              <td>130,463</td>
+              <td>150,463</td>
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>923,366</td>
+              <td>130,463</td>
+            </tr>
+          </tbody>
+        </table>`;
+
+      var p2 = `
+        <table class='table table-bordered table-hover'>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Kerala</th>
+              <th>Tamil Nadu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2013</td>
+              <td>858,143</td>
+              <td>923,366</td>
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>831,477</td>
+              <td>923,366</td>
+            </tr>
+          </tbody>
+        </table>`;
+
+      let currentPage = 1;
+
+      function renderPage(page) {
+        if (page === 1) {
+          $("#pagecontent").html(p1);
+        } else {
+          $("#pagecontent").html(p2);
+        }
+      }
+
+      // Load page 1 initially
+      renderPage(1);
+
+      $(".next").click(function() {
+        currentPage = 2;
+        renderPage(currentPage);
+      });
+
+      $(".previous").click(function() {
+        currentPage = 1;
+        renderPage(currentPage);
+      });
+    });
+  </script>
+
+</body>
+</html>

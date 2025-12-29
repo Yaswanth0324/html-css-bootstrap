@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS and JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><strong>Phenomenal India</strong></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- Left nav -->
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#destinations">Destinations <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Kerala</a></li>
+              <li><a href="#">Tamil Nadu</a></li>
+              <li><a href="#">Sikkim</a></li>
+              <li><a href="#">Karnataka</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Packages <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Family</a></li>
+              <li><a href="#">Honeymoon</a></li>
+              <li><a href="#">Winter</a></li>
+              <li><a href="#">Backwaters</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Things to Do</a></li>
+          <li><a href="#">Best of India</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter search text">
+          </div>
+          <button type="button" class="btn btn-default">Submit</button>
+        </form>
+
+        <!-- Right nav with View Ratings Button -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><button class="btn btn-primary navbar-btn">View Ratings</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Section -->
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li class="active"><a href="#">TamilNadu</a></li>
+    </ul>
+
+    <!-- Location -->
+    <h3>Location</h3>
+    <div class="text-justify">
+      Located in south India, <abbr title="Tamil Nadu">TN</abbr> is
+      bound by Andhra Pradesh and Karnataka in the north, Indian Ocean in the south, 
+      Bay of Bengal in the east, and Kerala in the west.
+    </div>
+
+    <!-- Fairs & Festivals -->
+    <h3>Fairs & Festivals</h3>
+    <div class="text-justify">
+      Pongal is the main festival in Tamil Nadu. Celebrated in January, it marks the harvest season.
+      Thaipusam, celebrated in January and February in Thanjavur and Palani, is marked by ritual bathing.
+    </div>
+
+    <!-- Hill Stations -->
+    <h3>Hill Stations in Tamil Nadu</h3>
+    <div class="text-justify">
+      <dl>
+        <dt>Ooty</dt>
+        <dd>Known for valleys, wild flowers, lush forests, and tea plantations.</dd>
+        <dt>Kodaikanal</dt>
+        <dd>Surrounded by rocks and lakes, a global tourist attraction.</dd>
+        <dt>Yercaud</dt>
+        <dd>A beautiful mountain territory in Salem district.</dd>
+      </dl>
+    </div>
+
+    <!-- Contact Info -->
+    <h3>Contact <abbr title="Tamil Nadu">TN</abbr> Tourism:</h3>
+    <address>
+      <dl class="dl-horizontal">
+        <dt>Postal Address:</dt>
+        <dd>Tourism Complex, No.2, Wallajah Road, Triplicane, Chennai-123456</dd>
+        <dt>Email Id:</dt>
+        <dd><a href="mailto:abc@phenomnlindia.com">abc@phenomnlindia.com</a></dd>
+        <dt>Website:</dt>
+        <dd>www.phenomnlindia.com</dd>
+        <dt>Telephone:</dt>
+        <dd>044-11222333, 11222334, 11222335</dd>
+      </dl>
+    </address>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Phenomenal India - Nav Pills</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS and JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Fix dropdown in nav-pills */
+    .nav-pills > li.dropdown.open .dropdown-menu {
+      display: block;
+      position: absolute;
+    }
+    .nav-pills > li.dropdown .dropdown-menu > li > a {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fullwidth" id="header">
+    <header class="text-center">
+      <h3>Phenomenal India</h3>
+    </header>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a href="#">Home</a></li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Destinations <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Kerala</a></li>
+          <li><a href="#">Tamil Nadu</a></li>
+          <li><a href="#">Shimla</a></li>
+          <li><a href="#">Sikkim</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Packages <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Family</a></li>
+          <li><a href="#">Honeymoon</a></li>
+          <li><a href="#">Winter</a></li>
+          <li><a href="#">Backwaters</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Things to Do</a></li>
+      <li><a href="#">Best of India</a></li>
+    </ul>
+  </div>
+
+  <br><br><br>
+
+  <!-- Image -->
+  <div class="text-center">
+    <img src="shutterstockimages/india.PNG" class="img img-responsive center-block" alt="India" />
+  </div>
+
+  <!-- About Section -->
+  <div class="container">
+    <p id="aboutIndia" class="text-justify">
+      India is a very vast country, rich in cultural heritage and breathtaking natural beauty and resources.
+      India is popular for its integrity amongst the rich diversity of people speaking multiple different languages.
+      One can travel within India with any travel segments like luxury stays like palace hotels, or even moderate options 
+      like guesthouses or homestays. This naturally adds to the appeal as one of the possible travel destinations.
+    </p>
+  </div>
+
+</body>
+</html>

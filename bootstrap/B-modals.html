@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Modal + Affix Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Optional CSS -->
+  <style>
+    body {
+      position: relative;
+    }
+    .affix {
+      top: 20px;
+      z-index: 9999 !important;
+    }
+    .modal-header {
+      background-color: #337ab7;
+      color: white;
+      padding: 15px;
+    }
+    .modal-header p {
+      margin: 0;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="fullwidth text-center" id="header">
+  <header>
+    <h3>Phenomenal India</h3>
+  </header>
+</div>
+
+<!-- SignUp Button -->
+<br>
+<div class="container text-right">
+  <button class="btn btn-success" data-toggle="modal" data-target="#myModal2">SignUp</button>
+</div>
+
+<!-- SignUp Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <p id="myModalLabel">SignUp</p>
+      </div>
+
+      <div class="modal-body">
+        <form class="form-horizontal" id="signupform">
+          <div class="form-group">
+            <label class="control-label col-sm-3 text-right" for="inputFname">Name</label>
+            <div class="col-sm-9">
+              <input type="text" id="inputFname" class="form-control" placeholder="Enter your Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3 text-right" for="inputMobNumber">Mobile</label>
+            <div class="col-sm-9">
+              <input type="tel" id="inputMobNumber" class="form-control" placeholder="Enter your Mobile Number">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3 text-right" for="inputPassword">Password</label>
+            <div class="col-sm-9">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Enter your Password" onkeyup="validatePassword()">
+              <div style="font-size:small; color:red;" id="pwd" class="error"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+              <button type="button" class="btn btn-lg btn-primary" onclick="setUserValue()">SignUp</button>
+              <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Content with Affix Sidebar -->
+<div class="container">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-sm-3">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <li class="active"><a href="#Home">Home</a></li>
+        <li><a href="#Destinations">Destinations</a></li>
+        <li><a href="#Packages">Packages</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="col-sm-9">
+      <div id="Home" class="row">
+        <h2>Kerala</h2>
+        <img src="shutterstockimages/Kerala.PNG" class="img-responsive img-thumbnail">
+        <p>Kerala is situated on the southwestern tip of India. It’s known as "God’s Own Country" for its beautiful backwaters and lush greenery.</p>
+      </div>
+
+      <div id="Destinations" class="row">
+        <h2>Tamil Nadu</h2>
+        <img src="shutterstockimages/TNn.png" class="img-responsive img-thumbnail">
+        <p>Tamil Nadu is in southern India, rich in culture, temples, and classical arts. It borders Kerala, Andhra Pradesh, and Karnataka.</p>
+      </div>
+
+      <div id="Packages" class="row">
+        <h2>Sikkim</h2>
+        <img src="shutterstockimages/Sikkim.PNG" class="img-responsive img-thumbnail">
+        <p>Sikkim is in northeast India, known for its natural beauty, Buddhist monasteries, and alpine landscapes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Functions -->
+<script>
+  function validatePassword() {
+    const pwd = document.getElementById('inputPassword').value;
+    const msg = document.getElementById('pwd');
+    if (pwd.length < 6) {
+      msg.innerText = "Password must be at least 6 characters.";
+    } else {
+      msg.innerText = "";
+    }
+  }
+
+  function setUserValue() {
+    alert("SignUp button clicked! You can now implement form submission logic.");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <p id="name"></p>
+    <form id="myform" target="_self" autocomplete="on">
+        <label for="fname">f_name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="fav_language">fav_language:</label><br>
+        <input type="radio" id="html" name="fav_language" value="html">
+        <label for="html">html</label><br>
+        <input type="radio" id="css" name="fav_language" value="css>
+        <label for="css">css</label><br>
+        <input type="radio" id="javascipt" name="fav_language" value="javascript">
+        <label for="javascript">javascipt</label><br>
+        <input type="radio" id="react" name="fav_language" value="react.js">
+        <label for="react.js">react.js</label><br>
+        <label for="subjects">2nd Sem subject:</label><br>
+        <input type="checkbox" id="java" name="subjects" value="java">
+        <label for="java">java</label><br>
+        <input type="checkbox" id="DM" name="subjects" value="DM">
+        <label for="DM">DataMining</label><br>
+        <input type="checkbox" id="CN" name="subjects" value="CN">
+        <label for="CN">Computer Networks</label><br>
+        <input type="checkbox" id="CP" name="subjects" value="CP">
+        <label for="CP">Cloud Practitioner</label><br>
+        <input type="checkbox" id="MFCA" name="subjects" value="MFCA">
+        <label for="MFCA">MFCA</label><br>
+        <input type="checkbox" id="TRW" name="subjects" value="TRW">
+        <label for="TRW">TRW</label><br>
+        <label for="hero">choose your fav_hero:</label><Br>
+        <select id="hero" name="hero" size="3" multiple>
+            <option value="ALLU ARJUN " selected>ALLU ARJUN</option>
+            <option value="NTR">NTR</option>
+            <option value="RC">RC</option>
+            <option value="pspk">pspk</option>
+            <option value="prabhas" >prabhas</option>
+        </select><br>
+        <textarea name="messege" rows="10" cols="400" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            
+        </textarea>
+        <textarea name="messeges" style="height: 150px; width: 200px; font:italic;">
+        
+        </textarea><br>
+        <button onclick="alert('hi yash')">click</button><br>
+        <fieldset>
+            <legend>personal:</legend>
+            <label for="fname">fname:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="age">age:</label><br>
+            <input type="text" id="age" name="age" ><br>
+            <label for="class">fname</label><br>
+            <input type="text" id="class" name="class" >
+        </fieldset>
+        <label for="heros">HERO:</label><br>
+        <input list="heros">
+        <datalist id="heros">
+            <option value="AA">
+                <option value="NTR">
+                <option value="PB">
+                <option value="RC">
+                <option value="HR">
+        </datalist><br>
+       
+        <input type="submit" value="submit">
+
+    </form>
+<script>
+    document.getElementById("myform").addEventListener("submit" function(event){
+        event.preventDefault();
+        let name=document.getElementById("name").value;
+        document.getElementById("name").innerHTML="name:" + name;
+    });
+</script>    
+</body>
+</html>

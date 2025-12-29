@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="icon" href="pushpa2.jpg">
+</head>
+<body>
+    <form>
+        <label for="fname">fname:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="fname" autofocus><br>
+        <label for="pwd">password:</label><br>
+        <input type="password" id="pwd" name="pwd" placeholder="password" required><br>
+        <label for="course">course:</label><BR>
+        <input type="radio" id="html" name="course" value="html">
+        <label for="html">HTML</label><BR>
+        <input type="radio" id="css" name="course" value="css">
+        <label for="css">CSs</label><br>
+        <label for="hero">HERO:</label><br>
+        <input type="checkbox" id="AA" name="Hero" value="AA">
+        <label for="AA">AA</label><br>
+        <input type="checkbox" id="ntr" name="Hero" value="ntr">
+        <label for="ntr">NTR</label><br>
+        <input type="button" onclick="alert('hi yash')" value="click"><br>
+        <label for="favcolor">pick favourite:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff1515"><br>
+        <label for="bd">BirthDay:</label>
+        <input type="date" id="bd" name="BirthDay" ><br>
+        <label for="dtl">BirthDay-Time:</label>
+        <input type="datetime-local" id="dtl" name="dtl"><br>
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" name="gmail" autocomplete="on"><br>
+        <input type="image" src="pushpa2.jpg" alt="pushpa" width="200px" height="200px"><br>
+        <label for="myfile">select FIle:</label>
+        <input type="file" id="myfile" name="myfile"><br>
+        <label for="myb">BIrthDay:</label>
+        <input type="month" id="myb" name="myb"><br>
+        <label for="num">NUMBER:</label>
+        <input type="number" id="num" name="num" max="2000" min="0"><br>
+        <label for="vol">volume:</label>
+        <input type="range" id="vol" name="vol" min="0" max="500"><br>
+        <label for="gs">gsearch:</label>
+        <input type="search" id="gs" name="gs"><br>
+        <label for="ph">enter PHone NO:</label>
+        <input type="tel" id="ph" name="ph" pattern="[0-9]{10}" placeholder="ph.no" maxlength="10"><br>
+        <label for="tm">Time:</label>
+        <input type="time" id="tm" name="tm"><br>
+        <label for="hp">URL:</label>
+        <input type="url" id="hp" name="hp"><br>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John" readonly disabled><br>
+        <label for="acronym">Acronym:</label>
+        <input type="text" id="acronym" name="acronym" pattern="[A-Za-z]{3}" title="three letters"><br>
+
+        <input type="submit" value="submit" >
+        <input type="reset" value="Reset">
+
+
+      
+    </form>
+</body>
+</html>

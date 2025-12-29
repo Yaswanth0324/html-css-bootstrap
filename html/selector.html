@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <link rel="stylesheet" href="pushpa.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        
+        body {
+            
+            opacity:10;
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        .dotted{
+            border-style: dotted;
+            border-width: 5px;
+            color: red;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow:2px 1px 2px blue;
+            font-family: copperplate,Papyrus, fantasy;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+        .dashed{
+            border-style: dashed;
+            border-width: medium;
+            border-color: blue;
+            text-align: left;
+            letter-spacing: -3px;
+            font-style: italic;
+        }
+        .solid{
+            border-style: solid;
+            border-width: thick;
+            border-radius: 10px;
+            text-align: right;
+            font-family: oblique;
+            font-size: 100%;
+        }
+        .double{
+            border-style: double;
+            border-width: 5px 10px;
+            border-radius: 100px;
+            text-align: inherit;
+            font-variant: small-caps;
+            font-size: larger;
+        }
+        .ridge{
+            border-style: ridge;
+            border-width: 5px 10px 15px ;
+            border-radius: 50px;
+            text-align: justify;
+            font-size: 40px;
+        }
+        .inset{
+            border-style: inset;
+            border-width: 5px 10px 15px 20px;
+            border-color: red blue violet orange;
+            opacity: 1;
+            padding: 5px 10px 15px 20px;
+            margin:5px 10px 15px 20px ;
+            text-align-last: inherit ;
+            
+        }
+        .outset{
+            border-style: outset;
+        } 
+        .none{
+            border-style: wavy;
+        }
+        .hidden{
+            border-style: hidden;
+        }
+        .mix{
+            border-style: dotted double dashed solid;
+            direction:rtl;
+            unicode-bidi: bidi-override;
+            line-height: 2px;
+            word-spacing: 2px;
+            white-space: nowrap;
+            font-family: "Sofia", sans-serif;
+            font-size: small;
+        }
+        div{
+            margin :inherit;
+            border: 5px solid rgb(70, 14, 70) ;
+            text-indent: 20px;
+            
+        }
+        .box{
+            width: 100px;
+            border: thick solid red;
+            padding:5px 10px 15px 20px ;
+            margin: 10px;
+            outline:10px solid blue ;
+            outline-offset: 10px;
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(116, 116, 172), 0 0 5px rgb(143, 143, 168);
+            font-family: cursive;
+        }
+        .a{
+            vertical-align: baseline;
+        }
+        .b{
+            vertical-align: text-bottom;
+            text-decoration-line: line-through;
+            text-decoration-color: red;
+            text-decoration-style: double;
+            text-decoration-thickness: 1px;
+            text-transform: capitalize;
+           
+        }
+        .c{
+            vertical-align: text-top;
+            text-decoration-line: overline;
+            text-decoration-color: blue;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 25%;
+            text-transform: lowercase;
+            line-height: 0.7px;
+        }
+        .d{
+            vertical-align: sub;
+            text-decoration-line: underline ;
+            text-decoration-style: dashed;
+            text-decoration-thickness: auto;
+            text-transform: uppercase;
+            word-spacing: 20px;
+        }
+            
+        
+        .e{
+            vertical-align: super;
+            text-decoration-line: overline line-through underline;
+            text-decoration-color: yellow ;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body style="max-width: 100%;">
+hi
+<p class="dotted">PushpaRaj</p>
+<p class="dashed">PushpaRaj</p>
+<p class="solid">PushpaRaj</p>
+<p class="double">PushpaRaj</p>
+<p class="ridge">PushpaRaj</p>
+<p class="inset">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis molestias ut doloribus a totam. Ut molestias possimus similique beatae. Aperiam corporis aspernatur voluptatibus laborum veniam eos laudantium saepe, dolore blanditiis.</p>
+<p class="outset">PushpaRaj</p>
+<p class="none">PushpaRaj</p>
+<p class="hidden">PushpaRaj</p>
+<p class="mix">PushpaRaj</p>
+<div>
+    top margin is 25px
+    right and left margins are 50px
+    bottom margin is 75px
+</div><br>
+<div class="box">
+    MUMMY
+</div>
+<p>image with a <span class="a">text-bottom</span> alignment</p>
+<p>image with a <span class="b">text-bottom</span> alignment</p>
+<p>image with a <span class="c">text-bottom</span> alignment</p><br>
+<p>image with a <span class="d">text-bottom</span> alignment</p><br>
+<p>image with a <span class="e">text-bottom</span> alignment</p><br>
+
+
+</body>
+</html>

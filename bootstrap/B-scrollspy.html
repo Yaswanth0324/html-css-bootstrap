@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Phenomenal India - Scrollspy Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS and JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      position: relative;
+    }
+    section {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      border-bottom: 1px solid #ccc;
+    }
+    .navbar {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Phenomenal India</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="#section2">Destinations</a></li>
+        <li><a href="#section3">Packages</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Sections -->
+  <div class="container">
+
+    <section id="section1">
+      <h1>Home</h1>
+      <p>India is a very vast country, rich in cultural heritage and breathtaking natural beauty. It is known for its unity in diversity. A perfect blend of history, tradition, and modernity.</p>
+    </section>
+
+    <section id="section2">
+      <h1>Destinations</h1>
+      <p>Explore iconic places like Kerala – God's Own Country, Tamil Nadu – Land of Vedas, Sikkim – Land of Love, and Karnataka – Land of Sandalwood.</p>
+    </section>
+
+    <section id="section3">
+      <h1>Packages</h1>
+      <p>We offer Luxury and Family Tour Packages at attractive prices. Enjoy premium hospitality and unforgettable travel experiences across India.</p>
+    </section>
+
+  </div>
+
+  <!-- Optional: Activate Scrollspy manually -->
+  <script>
+    $('body').scrollspy({ target: '.navbar', offset: 70 });
+  </script>
+
+</body>
+</html>
