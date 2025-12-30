@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>images</title>
-    <link rel="icon" type="image" href="pushpa2.jpg">
+    <title>Images</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="pushpa2.jpg">
 </head>
-<body style="background-image: url('pushpa2.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
-    <pre>
-    <img src="pushpa2.jpg" alt="pushpa2" style="float:right;height:  100px;width: 100px;">
-    <img src="file:///C:/Users/yamun/OneDrive/Pictures/Camera%20Roll/WIN_20241104_11_31_00_Pro.jpg" alt="lavanyash">
-    <img src="\Barber_Shop_img\10.jpg" alt="barber">
-    <img src="pushpa2.jpg" alt="pushpa" height="200" width="200" usemap="#map">
-    <img src="https://media.istockphoto.com/id/505221662/photo/elephants-in-river.jpg?s=612x612&w=is&k=20&c=DeT2xOUxJeOyU0rZNhRPhYCVu-xCu5O153jOuJ_Nwf8=" alt="images">
-    <input type="image" src="file:///C:/Users/yamun/OneDrive/Pictures/Camera%20Roll/WIN_20241104_11_31_00_Pro.jpg">
-    <img src="file:///C:/Users/yamun/OneDrive/Pictures/lavanyash.jpg" alt="yash">
-    <img src="C:/Users/yamun/OneDrive/Pictures/lavanyash.jpg" alt="yash1">
-    <img src="https://media.itsnicethat.com/original_images/giphy-2021-gifs-and-clips-animation-itsnicethat-02.gif" alt="gift">
+
+<body style="
+    background-image: url('pushpa2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+">
+
+    <!-- Floating image -->
+    <img src="pushpa2.jpg" alt="Pushpa" style="float:right; height:100px; width:100px;">
+
+    <!-- Local images (relative paths recommended) -->
+    <img src="lavanyash.jpg" alt="Lavanyash">
+    <img src="Barber_Shop_img/10.jpg" alt="Barber">
+
+    <!-- Image map -->
+    <img src="pushpa2.jpg" alt="Pushpa Map" height="200" width="200" usemap="#map">
+
     <map name="map">
-        <area shape="rect" coords="1,1,95,95" alt="pushpa" href="https://www.imdb.com/title/tt16539454/mediaviewer/rm2460231937/">
+        <area shape="rect" coords="1,1,95,95"
+              alt="Pushpa"
+              href="https://www.imdb.com/title/tt16539454/">
     </map>
+
+    <!-- Online image -->
+    <img src="https://media.istockphoto.com/id/505221662/photo/elephants-in-river.jpg"
+         alt="Elephants">
+
+    <!-- Image button -->
+    <input type="image"
+           src="lavanyash.jpg"
+           alt="Submit Image"
+           height="100"
+           width="100">
+
+    <!-- GIF -->
+    <img src="https://media.itsnicethat.com/original_images/giphy-2021-gifs-and-clips-animation-itsnicethat-02.gif"
+         alt="GIF">
+
+    <!-- Picture element (responsive images) -->
     <picture>
-        <source media="(min-width:650px)" srcset="https://www.imdb.com/title/tt16539454/mediaviewer/rm2460231937/">
-        <source media="(min-width:300px)" srcset="https://www.hindustantimes.com/entertainment/telugu-cinema/pushpa-2-the-rule-review-allu-arjun-delivers-a-wildfire-rashmika-mandanna-fahadh-faasil-sukumar-101733345007602.html">
-        
+        <source media="(min-width:650px)" srcset="pushpa12.jpg">
+        <source media="(min-width:300px)" srcset="workplace.jpg">
+        <img src="pushpa12.jpg" alt="Pushpa Responsive">
     </picture>
-    <img src="https://images.deccanherald.com/deccanherald%2F2024-12-05%2Fepw0qxey%2F0.jpg?auto=format%2Ccompress&fmt=webp&fit=max&format=webp&q=70&w=400&dpr=2" alt="peel">
 
-    <img src="pushpa12.jpg" alt="pushpa" style="float: left;height: 20px;width: 20px;">
-    <img src="pushpa12.jpg" alt="pushpa" style="float: right;height: 20px;width: 20px;">
+    <!-- Online image -->
+    <img src="https://images.deccanherald.com/deccanherald%2F2024-12-05%2Fepw0qxey%2F0.jpg"
+         alt="Article Image"
+         width="400">
 
+    <!-- Small floating images -->
+    <img src="pushpa12.jpg" alt="Left" style="float:left; height:20px; width:20px;">
+    <img src="workplace.jpg" alt="Right" style="float:right; height:20px; width:20px;">
+
+    <picture>
+        <source>
+    </picture>
 </body>
-</pre>
 </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Grid layout */
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 8px;
+            height: 100vh;
+        }
+
+        .div1 {
+            grid-column: span 5;
+        }
+
+        .div2 {
+            grid-row: span 4;
+            grid-row-start: 2;
+        }
+
+        .div3 {
+            grid-column: span 2;
+            grid-row: span 2;
+            grid-row-start: 2;
+        }
+
+        .div4 {
+            grid-column: span 2;
+            grid-row: span 4;
+            grid-column-start: 4;
+            grid-row-start: 2;
+        }
+
+        .div5 {
+            grid-row: span 2;
+            grid-column-start: 2;
+            grid-row-start: 4;
+        }
+
+        .div6 {
+            grid-row: span 2;
+            grid-column-start: 3;
+            grid-row-start: 4;
+        }
+
+        /* Navbar styles */
+        .navbar-custom {
+            background-color: lightblue;
+            width: 100%;
+        }
+
+        .navbar-custom .nav {
+            display: flex;
+            flex-direction: row;   /* ONE LINE */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;     /* Prevent wrap */
+        }
+
+        .navbar-custom .nav-link {
+            white-space: nowrap;
+            padding: 10px 18px;
+            font-weight: 500;
+        }
+        li{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="parent">
+
+    <!-- NAVBAR -->
+    <div class="div1">
+        <nav class="navbar-custom">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 4</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- IMAGE MAP -->
+    <div class="div2">
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap" class="img-fluid">
+
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" href="#" alt="Computer">
+            <area shape="rect" coords="290,172,333,250" href="#" alt="Phone">
+            <area shape="circle" coords="337,300,44" href="#" alt="Coffee">
+        </map>
+    </div>
+
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+    <div class="div5">5</div>
+    <div class="div6">6</div>
+
+</div>
+
+</body>
+</html>
